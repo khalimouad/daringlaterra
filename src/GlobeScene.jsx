@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+const assets={class:'/images/classroom.jpg',group:'/images/london-group.jpg'};
 export default function GlobeScene(){const host=useRef(null);useEffect(()=>{const el=host.current;if(!el)return;let renderer,frame,disposed=false;const scene=new THREE.Scene();scene.background=null;const camera=new THREE.PerspectiveCamera(32,1,.1,100);camera.position.set(0,0,5.9);const group=new THREE.Group();scene.add(group);const globe=new THREE.Mesh(new THREE.SphereGeometry(1.35,72,56),new THREE.MeshStandardMaterial({color:'#102448',roughness:.68,metalness:.12}));group.add(globe);
 // Equirectangular canvas texture with restrained, original land silhouettes.
 const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=512;const ctx=canvas.getContext('2d');ctx.fillStyle='#142b50';ctx.fillRect(0,0,1024,512);ctx.fillStyle='#e8e5d9';ctx.strokeStyle='#d8d5ca';ctx.lineWidth=2;
