@@ -1,1 +1,1 @@
-{"framework":"vite","buildCommand":"npm run build","outputDirectory":"dist","installCommand":"npm install"}
+{"framework":"vite","buildCommand":"npm run build","outputDirectory":"dist","installCommand":"npm install","rewrites":[{"source":"/((?!assets/|images/|robots.txt|sitemap.xml).*)","destination":"/index.html"}]}
